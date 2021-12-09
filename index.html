@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final_Project</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Учет моих расходов</h2>
+      <div class="center">
+        <div class="block1">
+          <p>Куда было потрачено:</p>
+          <input type="text" id="midll-window" placeholder="Куда было потрачено">
+        </div>
+        <div class="block2">
+          <p>Сколько было потрачено:</p>
+          <input type="number" id="second-window" placeholder="Сколько было потрачено" onkeypress='validate(event)'>
+        </div>
+        <div class="click">
+          <button onclick="onclickButtom()" .innerHTML="Date()">Добавить</button>
+        </div>
+      </div>
+      <div class="end">
+        <p class="total">Итого: <span id="byend"></span>р.</p>
+      </div>
+    </div>
+  </div>
+  <div id="shopping"></div>
+</body>
+
+</html>
