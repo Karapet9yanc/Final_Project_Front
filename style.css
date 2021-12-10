@@ -63,7 +63,6 @@ input {
   width: 250px;
   height: auto;
 }
-
 #elem:hover {
   width: 250px;
   word-wrap: break-word;
