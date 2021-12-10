@@ -1,191 +1,236 @@
-body{
+body {
   text-align: center;
   background-color: #657580;
   width: auto;
 }
-.container{
-  width:50%;
+#overflow-clip {
+  text-overflow: ellipsis;
+}
+.container {
+  width: 50%;
   text-align: center;
   margin: 0 auto;
 }
-h2{
-font-size: 60px;
-font-weight: normal;
+
+h2 {
+  font-size: 60px;
+  font-weight: normal;
 }
-.center{
+
+.center {
   display: flex;
   width: 100%;
   flex-direction: row;
   align-items: flex-end;
   flex-wrap: nowrap;
   align-content: center;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
-.end{
+
+.end {
   text-align: end;
 }
-#midll-window{
+
+#midll-window {
   height: 36px;
   width: 450px;
 }
-input{
+
+input {
   height: 36px;
   border: none;
   font-size: 15px;
   width: 250px;
   border-radius: 7px;
 }
-.block1{
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-}
-.block2{
+
+.block1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-button{
+
+.block2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#elem {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#result {
+  width: 250px;
+  height: auto;
+}
+
+#elem:hover {
+  width: 250px;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: inherit;
+}
+button {
   height: 34px;
   width: 89px;
   border-radius: 10px;
   background-color: #4c866a;
 }
-input:focus{
+p.clip {
+  white-space: nowrap; /* Запрещаем перенос строк */
+  overflow: hidden; /* Обрезаем все, что не помещается в область */
+  background: #fc0; /* Цвет фона */
+  padding: 5px; /* Поля вокруг текста */
+  text-overflow: ellipsis; /* Добавляем многоточие */
+}
+input:focus {
   outline: none;
 }
-#ret{
+
+#ret {
   width: 200px;
 }
-#shopping{
+
+#shopping {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-#first{
-display: flex;
-align-items: center;
-}
-#clone{
-  margin-right: 10px;
-}
-#purchase{
-  display: flex;
-}
-imageClick{
-  margin-left: 15vh;
-}
-#second{
-  margin-left: 15vh;
-}
-#data1{
-  margin-left: 15vh;
-}
-#verstka{
+
+#first {
   display: flex;
   align-items: center;
 }
-@media screen and (max-width : 1662px) {
-  input{
+
+#clone {
+  margin-right: 10px;
+}
+
+#purchase {
+  display: flex;
+}
+
+imageClick {
+  margin-left: 15vh;
+}
+
+#second {
+  margin-left: 15vh;
+}
+
+#data1 {
+  margin-left: 15vh;
+}
+
+#verstka {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 1662px) {
+  input {
     height: 36px;
     border: none;
     font-size: 15px;
     width: 350px;
   }
-  #midll-window{
+  #midll-window {
     height: 36px;
     width: 330px;
   }
-    imageClick{
+  imageClick {
     margin-left: 11vh;
   }
-  #second{
+  #second {
     margin-left: 11vh;
   }
-  #data1{
+  #data1 {
     margin-left: 11vh;
   }
 }
-@media screen and (max-width : 1597px) {
-  input{
+
+@media screen and (max-width: 1597px) {
+  input {
     height: 36px;
     border: none;
     font-size: 15px;
     width: 300px;
   }
-  #midll-window{
+  #midll-window {
     height: 36px;
     width: 300px;
   }
-  imageClick{
+  imageClick {
     margin-left: 10vh;
   }
-  #second{
+  #second {
     margin-left: 10vh;
   }
-  #data1{
+  #data1 {
     margin-left: 10vh;
   }
 }
 
-@media screen and (max-width : 1425px) {
-  input{
+@media screen and (max-width: 1425px) {
+  input {
     height: 36px;
     border: none;
     font-size: 15px;
     width: 280px;
   }
-  #midll-window{
+  #midll-window {
     height: 36px;
     width: 280px;
   }
-  imageClick{
+  imageClick {
     margin-left: 8vh;
   }
-  #second{
+  #second {
     margin-left: 8vh;
   }
-  #data1{
+  #data1 {
     margin-left: 8vh;
   }
 }
-@media screen and (max-width : 1349px) {
-  input{
+
+@media screen and (max-width: 1349px) {
+  input {
     height: 36px;
     border: none;
     font-size: 15px;
     width: 260px;
   }
-  #midll-window{
+  #midll-window {
     height: 36px;
     width: 260px;
   }
-  #shopping{
+  #shopping {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
   }
 }
-@media screen and (max-width : 1265px) {
-  input{
+
+@media screen and (max-width: 1265px) {
+  input {
     height: 36px;
     border: none;
     font-size: 15px;
     width: 240px;
   }
-  #midll-window{
+  #midll-window {
     height: 36px;
     width: 240px;
   }
-  #shopping{
+  #shopping {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
   }
-  .center{
+  .center {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -193,73 +238,79 @@ imageClick{
     align-content: center;
     justify-content: space-between;
     align-items: flex-end;
-  } 
+  }
 }
-@media screen and (max-width : 1042px) {
-  h2{
+
+@media screen and (max-width: 1042px) {
+  h2 {
     font-size: 56px;
     font-weight: normal;
   }
-  imageClick{
+  imageClick {
     margin-left: 6vh;
   }
-  #second{
+  #second {
     margin-left: 6vh;
   }
-  #data1{
+  #data1 {
     margin-left: 6vh;
   }
-  #ret{
+  #ret {
     width: 150px;
   }
 }
-@media screen and (max-width : 975px) {
-  h2{
+
+@media screen and (max-width: 975px) {
+  h2 {
     font-size: 50px;
     font-weight: normal;
   }
 }
-@media screen and (max-width : 871px) {
-  h2{
+
+@media screen and (max-width: 871px) {
+  h2 {
     font-size: 46px;
     font-weight: normal;
   }
 }
-@media screen and (max-width : 810px) {
-  imageClick{
+
+@media screen and (max-width: 810px) {
+  imageClick {
     margin-left: 4vh;
   }
-  #second{
+  #second {
     margin-left: 4vh;
   }
-  #data1{
+  #data1 {
     margin-left: 4vh;
   }
 }
-@media screen and (max-width : 804px) {
-  h2{
+
+@media screen and (max-width: 804px) {
+  h2 {
     font-size: 36px;
     font-weight: normal;
   }
 }
-@media screen and (max-width : 764px) {
-  input{
+
+@media screen and (max-width: 764px) {
+  input {
     height: 36px;
     border: none;
     font-size: 15px;
     width: 240px;
   }
-  #midll-window{
+  #midll-window {
     height: 36px;
     width: 240px;
   }
-  #shopping{
+  #shopping {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
   }
-  .center{
+  .center {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -268,119 +319,126 @@ imageClick{
     justify-content: space-between;
     align-items: flex-end;
   }
-  #shopping{
+  #shopping {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
-  imageClick{
+  imageClick {
     margin-left: 2vh;
   }
-  #second{
+  #second {
     margin-left: 2vh;
   }
-  #data1{
+  #data1 {
     margin-left: 2vh;
   }
-  #ret{
+  #ret {
     width: 140px;
   }
 }
-@media screen and (max-width : 763px) {
-  imageClick{
+
+@media screen and (max-width: 763px) {
+  imageClick {
     margin-left: 2vh;
   }
-  #second{
+  #second {
     margin-left: 2vh;
   }
-  #data1{
+  #data1 {
     margin-left: 2vh;
   }
-  #ret{
+  #ret {
     width: 140px;
   }
 }
-@media screen and (max-width : 632px) {
-  h2{
+
+@media screen and (max-width: 632px) {
+  h2 {
     font-size: 33px;
     font-weight: normal;
   }
 }
-@media screen and (max-width : 622px) {
-  imageClick{
+
+@media screen and (max-width: 622px) {
+  imageClick {
     margin-left: 2vh;
   }
-  #second{
+  #second {
     margin-left: 2vh;
   }
-  #data1{
+  #data1 {
     margin-left: 2vh;
   }
 }
-@media screen and (max-width : 581px) {
-  h2{
+
+@media screen and (max-width: 581px) {
+  h2 {
     font-size: 30px;
     font-weight: normal;
   }
 }
-@media screen and (max-width : 538px) {
-  imageClick{
+
+@media screen and (max-width: 538px) {
+  imageClick {
     margin-left: 2vh;
   }
-  #second{
+  #second {
     margin-left: 2vh;
   }
-  #data1{
+  #data1 {
     margin-left: 2vh;
   }
 }
-@media screen and (max-width : 529px) {
-  h2{
+
+@media screen and (max-width: 529px) {
+  h2 {
     font-size: 28px;
     font-weight: normal;
   }
 }
-@media screen and (max-width : 495px) {
-  h2{
+
+@media screen and (max-width: 495px) {
+  h2 {
     font-size: 24px;
     font-weight: normal;
   }
 }
-@media screen and (max-width : 427px) {
-  #verstka{
+
+@media screen and (max-width: 427px) {
+  #verstka {
     flex-direction: column;
   }
-  h2{
+  h2 {
     font-size: 22px;
     font-weight: normal;
   }
-  #purchase{
+  #purchase {
     display: flex;
     align-items: flex-start;
   }
-  body{
+  body {
     background-color: #c5e7ff;
   }
-  #second{
+  #second {
     margin-bottom: 1vh;
-  } 
-  #data1{
+  }
+  #data1 {
     margin-bottom: 1vh;
   }
 }
-@media screen and (max-width : 393px) {
-  h2{
+
+@media screen and (max-width: 393px) {
+  h2 {
     font-size: 20px;
     font-weight: normal;
   }
-  body{
+  body {
     background-color: #c5e7ff;
   }
-  .container{
+  .container {
     width: 75%;
   }
 }
-
-
