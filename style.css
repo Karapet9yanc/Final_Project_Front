@@ -1,0 +1,407 @@
+body {
+  text-align: center;
+  background-color: #657580;
+  width: auto;
+}
+#overflow-clip {
+  text-overflow: ellipsis;
+}
+.container {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+h2 {
+  font-size: 60px;
+  font-weight: normal;
+}
+.div-container-element {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+}
+.final-price {
+  text-align: end;
+}
+#input-shop {
+  height: 36px;
+  width: 450px;
+}
+input {
+  height: 36px;
+  border: none;
+  font-size: 15px;
+  width: 250px;
+  border-radius: 7px;
+}
+.div-container-input-shop {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.div-container-input-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#elem {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#name-shop {
+  width: 250px;
+  height: auto;
+}
+#elem:hover {
+  width: 250px;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: inherit;
+}
+button {
+  height: 34px;
+  width: 89px;
+  border-radius: 10px;
+  background-color: #4c866a;
+}
+p.clip {
+  white-space: nowrap; /* Запрещаем перенос строк */
+  overflow: hidden; /* Обрезаем все, что не помещается в область */
+  background: #fc0; /* Цвет фона */
+  padding: 5px; /* Поля вокруг текста */
+  text-overflow: ellipsis; /* Добавляем многоточие */
+}
+input:focus {
+  outline: none;
+}
+#edit {
+  width: 200px;
+}
+#shopping {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#div-element-shop {
+  display: flex;
+  align-items: center;
+}
+#span-shop {
+  margin-right: 10px;
+}
+#purchase {
+  display: flex;
+}
+imageClick {
+  margin-left: 15vh;
+}
+#div-how-much {
+  margin-left: 15vh;
+}
+#data {
+  margin-left: 15vh;
+}
+#div-element-purchases {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 1662px) {
+  input {
+    height: 36px;
+    border: none;
+    font-size: 15px;
+    width: 350px;
+  }
+  #input-shop {
+    height: 36px;
+    width: 330px;
+  }
+  imageClick {
+    margin-left: 11vh;
+  }
+  #div-how-much {
+    margin-left: 11vh;
+  }
+  #data {
+    margin-left: 11vh;
+  }
+}
+@media screen and (max-width: 1597px) {
+  input {
+    height: 36px;
+    border: none;
+    font-size: 15px;
+    width: 300px;
+  }
+  #input-shop {
+    height: 36px;
+    width: 300px;
+  }
+  imageClick {
+    margin-left: 10vh;
+  }
+  #div-how-much {
+    margin-left: 10vh;
+  }
+  #data {
+    margin-left: 10vh;
+  }
+}
+@media screen and (max-width: 1425px) {
+  input {
+    height: 36px;
+    border: none;
+    font-size: 15px;
+    width: 280px;
+  }
+  #input-shop {
+    height: 36px;
+    width: 280px;
+  }
+  imageClick {
+    margin-left: 8vh;
+  }
+  #div-how-much {
+    margin-left: 8vh;
+  }
+  #data {
+    margin-left: 8vh;
+  }
+}
+@media screen and (max-width: 1349px) {
+  input {
+    height: 36px;
+    border: none;
+    font-size: 15px;
+    width: 260px;
+  }
+  #input-shop {
+    height: 36px;
+    width: 260px;
+  }
+  #shopping {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1265px) {
+  input {
+    height: 36px;
+    border: none;
+    font-size: 15px;
+    width: 240px;
+  }
+  #input-shop {
+    height: 36px;
+    width: 240px;
+  }
+  #shopping {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .div-container-element {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+@media screen and (max-width: 1042px) {
+  h2 {
+    font-size: 56px;
+    font-weight: normal;
+  }
+  imageClick {
+    margin-left: 6vh;
+  }
+  #div-how-much {
+    margin-left: 6vh;
+  }
+  #data {
+    margin-left: 6vh;
+  }
+  #edit {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 975px) {
+  h2 {
+    font-size: 50px;
+    font-weight: normal;
+  }
+}
+@media screen and (max-width: 871px) {
+  h2 {
+    font-size: 46px;
+    font-weight: normal;
+  }
+}
+@media screen and (max-width: 810px) {
+  imageClick {
+    margin-left: 4vh;
+  }
+  #div-how-much {
+    margin-left: 4vh;
+  }
+  #data {
+    margin-left: 4vh;
+  }
+}
+@media screen and (max-width: 804px) {
+  h2 {
+    font-size: 36px;
+    font-weight: normal;
+  }
+}
+@media screen and (max-width: 764px) {
+  input {
+    height: 36px;
+    border: none;
+    font-size: 15px;
+    width: 240px;
+  }
+  #input-shop {
+    height: 36px;
+    width: 240px;
+  }
+  #shopping {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .div-container-element {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  #shopping {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  imageClick {
+    margin-left: 2vh;
+  }
+  #div-how-much {
+    margin-left: 2vh;
+  }
+  #data {
+    margin-left: 2vh;
+  }
+  #edit {
+    width: 140px;
+  }
+}
+@media screen and (max-width: 763px) {
+  imageClick {
+    margin-left: 2vh;
+  }
+  #div-how-much {
+    margin-left: 2vh;
+  }
+  #data {
+    margin-left: 2vh;
+  }
+  #edit {
+    width: 140px;
+  }
+}
+@media screen and (max-width: 632px) {
+  h2 {
+    font-size: 33px;
+    font-weight: normal;
+  }
+}
+@media screen and (max-width: 622px) {
+  imageClick {
+    margin-left: 2vh;
+  }
+  #div-how-much {
+    margin-left: 2vh;
+  }
+  #data {
+    margin-left: 2vh;
+  }
+}
+@media screen and (max-width: 581px) {
+  h2 {
+    font-size: 30px;
+    font-weight: normal;
+  }
+}
+@media screen and (max-width: 538px) {
+  imageClick {
+    margin-left: 2vh;
+  }
+  #div-how-much {
+    margin-left: 2vh;
+  }
+  #data {
+    margin-left: 2vh;
+  }
+}
+@media screen and (max-width: 529px) {
+  h2 {
+    font-size: 28px;
+    font-weight: normal;
+  }
+}
+@media screen and (max-width: 495px) {
+  h2 {
+    font-size: 24px;
+    font-weight: normal;
+  }
+}
+@media screen and (max-width: 427px) {
+  #div-element-purchases {
+    flex-direction: column;
+  }
+  h2 {
+    font-size: 22px;
+    font-weight: normal;
+  }
+  #purchase {
+    display: flex;
+    align-items: flex-start;
+  }
+  body {
+    background-color: #c5e7ff;
+  }
+  #div-how-much {
+    margin-bottom: 1vh;
+  }
+  #data {
+    margin-bottom: 1vh;
+  }
+}
+@media screen and (max-width: 393px) {
+  h2 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+  body {
+    background-color: #c5e7ff;
+  }
+  .container {
+    width: 75%;
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final_Project</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>Учет моих расходов</h2>
+        <div class="div-container-element">
+          <div class="div-container-input-shop">
+            <p>Куда было потрачено:</p>
+            <input
+              type="text"
+              id="input-shop"
+              placeholder="Куда было потрачено"
+            />
+          </div>
+          <div class="div-container-input-price">
+            <p>Сколько было потрачено:</p>
+            <input
+              type="number"
+              id="input-price"
+              placeholder="Сколько было потрачено"
+              onkeypress="validate(event)"
+            />
+          </div>
+          <div>
+            <button onclick="onclickButtom()">Добавить</button>
+          </div>
+        </div>
+        <div class="final-price">
+          <p class="total">Итого: <span id="byend"></span>р.</p>
+        </div>
+      </div>
+    </div>
+    <div id="shopping"></div>
+  </body>
+</html>
