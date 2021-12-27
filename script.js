@@ -72,7 +72,7 @@ const render = () => {
     expenses.removeChild(expenses.firstChild);
   }
   allPurchases.map((item, index) => {
-    let { shop, price, date } = item;
+    const { shop, price, date } = item;
     const container = document.createElement("div");
     container.className = "allPurchases-container";
     container.id = `task-${index}`;
