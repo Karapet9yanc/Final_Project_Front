@@ -30,7 +30,7 @@ const onclickButtom = async () => {
         "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({
-        magaz: valueInputShop,
+        shop: valueInputShop,
         price: valueInputPrice,
         date: day,
       }),
@@ -72,7 +72,7 @@ const render = () => {
     expenses.removeChild(expenses.firstChild);
   }
   allPurchases.map((item, index) => {
-    let { magaz, price, date } = item;
+    let { shop, price, date } = item;
     const container = document.createElement("div");
     container.className = "allPurchases-container";
     container.id = `task-${index}`;
@@ -80,18 +80,18 @@ const render = () => {
     shopName.id = `div-element-shop`;
     const spanShop = document.createElement("div");
     spanShop.id = `span-shop`;
-    const shop = document.createElement("div");
-    shop.id = `name-shop`;
+    const divShop = document.createElement("div");
+    divShop.id = `name-shop`;
     const nameShop = document.createElement("p");
     nameShop.innerText = `${index + 1}) Магазин :`;
     const element = document.createElement("p");
     element.id = `elem`;
-    element.innerText = magaz;
+    element.innerText = shop;
 
     spanShop.appendChild(nameShop);
-    shop.appendChild(element);
+    divShop.appendChild(element);
     shopName.appendChild(spanShop);
-    shopName.appendChild(shop);
+    shopName.appendChild(divShop);
     expenses.appendChild(shopName);
     const divDateElement = document.createElement("div");
     divDateElement.id = "data";
@@ -125,22 +125,22 @@ const render = () => {
     inpData.type = "date";
     inpData.id = "edit";
     imageEdit.onclick = () => {
-      shop.replaceChild(inpSave, element);
+      divShop.replaceChild(inpSave, element);
       divDateElement.replaceChild(inpData, elementDate);
       divHowMuch.replaceChild(inpReplace, elementHowMuch);
       imageClick.replaceChild(imageSave, imageEdit);
-      inpSave.value = magaz;
+      inpSave.value = shop;
       inpReplace.value = price;
       inpData.value = date;
     };
     imageSave.onclick = async () => {
-      if (inpSave.value.trim() && inpReplace.value.trim()) {
-        shop.replaceChild(element, inpSave);
+      if (inpSave.value.trim() && inpReplace.value.trim) {
+        divShop.replaceChild(element, inpSave);
         divHowMuch.replaceChild(elementHowMuch, inpReplace);
         element.innerText = inpSave.value;
         elementHowMuch.innerText = inpReplace.value;
         date = inpData.value;
-        magaz = inpSave.value;
+        shop = inpSave.value;
         price = inpReplace.value;
         const resp = await fetch("http://localhost:8000/updatePurchase", {
           method: "PATCH",
@@ -188,7 +188,7 @@ const onDeleteallPurchases = async (index) => {
     {
       method: "DELETE",
       headers: {
-        "Content-Type": "magaz/html; charset=utf-8",
+        "Content-Type": "shop/html; charset=utf-8",
         "Access-Control-Allow-Origin": "*",
       },
     }
