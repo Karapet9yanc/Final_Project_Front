@@ -30,7 +30,7 @@ const onclickButtom = async () => {
         "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({
-        text: valueInputShop,
+        magaz: valueInputShop,
         price: valueInputPrice,
         date: day,
       }),
@@ -72,7 +72,7 @@ const render = () => {
     expenses.removeChild(expenses.firstChild);
   }
   allPurchases.map((item, index) => {
-    const { text, price, date } = item;
+    let { magaz, price, date } = item;
     const container = document.createElement("div");
     container.className = "allPurchases-container";
     container.id = `task-${index}`;
@@ -86,7 +86,7 @@ const render = () => {
     nameShop.innerText = `${index + 1}) Магазин :`;
     const element = document.createElement("p");
     element.id = `elem`;
-    element.innerText = text;
+    element.innerText = magaz;
 
     spanShop.appendChild(nameShop);
     shop.appendChild(element);
@@ -129,18 +129,18 @@ const render = () => {
       divDateElement.replaceChild(inpData, elementDate);
       divHowMuch.replaceChild(inpReplace, elementHowMuch);
       imageClick.replaceChild(imageSave, imageEdit);
-      inpSave.value = text;
+      inpSave.value = magaz;
       inpReplace.value = price;
       inpData.value = date;
     };
     imageSave.onclick = async () => {
-      if (text == inpSave.value.trim() && price == inpReplace.value) {
+      if (inpSave.value.trim() && inpReplace.value.trim()) {
         shop.replaceChild(element, inpSave);
         divHowMuch.replaceChild(elementHowMuch, inpReplace);
         element.innerText = inpSave.value;
         elementHowMuch.innerText = inpReplace.value;
         date = inpData.value;
-        text = inpSave.value;
+        magaz = inpSave.value;
         price = inpReplace.value;
         const resp = await fetch("http://localhost:8000/updatePurchase", {
           method: "PATCH",
@@ -188,7 +188,7 @@ const onDeleteallPurchases = async (index) => {
     {
       method: "DELETE",
       headers: {
-        "Content-Type": "text/html; charset=utf-8",
+        "Content-Type": "magaz/html; charset=utf-8",
         "Access-Control-Allow-Origin": "*",
       },
     }
