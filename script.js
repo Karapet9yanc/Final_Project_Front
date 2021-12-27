@@ -31,7 +31,7 @@ const onclickButtom = async () => {
       },
       body: JSON.stringify({
         text: valueInputShop,
-        text2: valueInputPrice,
+        price: valueInputPrice,
         date: day,
       }),
     });
@@ -72,7 +72,7 @@ const render = () => {
     expenses.removeChild(expenses.firstChild);
   }
   allPurchases.map((item, index) => {
-    let { text, text2, date } = item;
+    const { text, price, date } = item;
     const container = document.createElement("div");
     container.className = "allPurchases-container";
     container.id = `task-${index}`;
@@ -102,14 +102,14 @@ const render = () => {
     const divHowMuch = document.createElement("div");
     divHowMuch.id = "div-how-much";
     const elementHowMuch = document.createElement("p");
-    elementHowMuch.innerText = text2;
+    elementHowMuch.innerText = price;
     const divElementPurchases = document.createElement("div");
     divElementPurchases.id = "div-element-purchases";
     const Rub = document.createElement("span");
     Rub.innerText = " р.";
     elementHowMuch.appendChild(Rub);
     divHowMuch.appendChild(elementHowMuch);
-    sumBuy = sumBuy + Number(text2);
+    sumBuy = sumBuy + Number(price);
     const imageClick = document.createElement("div");
     imageClick.id = "imageClick";
     const imageSave = document.createElement("img");
@@ -130,18 +130,18 @@ const render = () => {
       divHowMuch.replaceChild(inpReplace, elementHowMuch);
       imageClick.replaceChild(imageSave, imageEdit);
       inpSave.value = text;
-      inpReplace.value = text2;
+      inpReplace.value = price;
       inpData.value = date;
     };
     imageSave.onclick = async () => {
-      if ((text = inpSave.value.trim()) && (text2 = inpReplace.value)) {
+      if (text == inpSave.value.trim() && price == inpReplace.value) {
         shop.replaceChild(element, inpSave);
         divHowMuch.replaceChild(elementHowMuch, inpReplace);
         element.innerText = inpSave.value;
         elementHowMuch.innerText = inpReplace.value;
         date = inpData.value;
         text = inpSave.value;
-        text2 = inpReplace.value;
+        price = inpReplace.value;
         const resp = await fetch("http://localhost:8000/updatePurchase", {
           method: "PATCH",
           headers: {
