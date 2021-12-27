@@ -11,13 +11,11 @@ body {
   text-align: center;
   margin: 0 auto;
 }
-
 h2 {
   font-size: 60px;
   font-weight: normal;
 }
-
-.center {
+.div-container-element {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -26,16 +24,13 @@ h2 {
   align-content: center;
   justify-content: space-between;
 }
-
-.end {
+.final-price {
   text-align: end;
 }
-
-#midll-window {
+#input-shop {
   height: 36px;
   width: 450px;
 }
-
 input {
   height: 36px;
   border: none;
@@ -43,14 +38,12 @@ input {
   width: 250px;
   border-radius: 7px;
 }
-
-.block1 {
+.div-container-input-shop {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-
-.block2 {
+.div-container-input-price {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -59,7 +52,7 @@ input {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#result {
+#name-shop {
   width: 250px;
   height: auto;
 }
@@ -85,48 +78,38 @@ p.clip {
 input:focus {
   outline: none;
 }
-
-#ret {
+#edit {
   width: 200px;
 }
-
 #shopping {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-
-#first {
+#div-element-shop {
   display: flex;
   align-items: center;
 }
-
-#clone {
+#span-shop {
   margin-right: 10px;
 }
-
 #purchase {
   display: flex;
 }
-
 imageClick {
   margin-left: 15vh;
 }
-
-#second {
+#div-how-much {
   margin-left: 15vh;
 }
-
-#data1 {
+#data {
   margin-left: 15vh;
 }
-
-#verstka {
+#div-element-purchases {
   display: flex;
   align-items: center;
 }
-
 @media screen and (max-width: 1662px) {
   input {
     height: 36px;
@@ -134,21 +117,20 @@ imageClick {
     font-size: 15px;
     width: 350px;
   }
-  #midll-window {
+  #input-shop {
     height: 36px;
     width: 330px;
   }
   imageClick {
     margin-left: 11vh;
   }
-  #second {
+  #div-how-much {
     margin-left: 11vh;
   }
-  #data1 {
+  #data {
     margin-left: 11vh;
   }
 }
-
 @media screen and (max-width: 1597px) {
   input {
     height: 36px;
@@ -156,21 +138,20 @@ imageClick {
     font-size: 15px;
     width: 300px;
   }
-  #midll-window {
+  #input-shop {
     height: 36px;
     width: 300px;
   }
   imageClick {
     margin-left: 10vh;
   }
-  #second {
+  #div-how-much {
     margin-left: 10vh;
   }
-  #data1 {
+  #data {
     margin-left: 10vh;
   }
 }
-
 @media screen and (max-width: 1425px) {
   input {
     height: 36px;
@@ -178,21 +159,20 @@ imageClick {
     font-size: 15px;
     width: 280px;
   }
-  #midll-window {
+  #input-shop {
     height: 36px;
     width: 280px;
   }
   imageClick {
     margin-left: 8vh;
   }
-  #second {
+  #div-how-much {
     margin-left: 8vh;
   }
-  #data1 {
+  #data {
     margin-left: 8vh;
   }
 }
-
 @media screen and (max-width: 1349px) {
   input {
     height: 36px;
@@ -200,7 +180,7 @@ imageClick {
     font-size: 15px;
     width: 260px;
   }
-  #midll-window {
+  #input-shop {
     height: 36px;
     width: 260px;
   }
@@ -211,7 +191,6 @@ imageClick {
     align-items: center;
   }
 }
-
 @media screen and (max-width: 1265px) {
   input {
     height: 36px;
@@ -219,7 +198,7 @@ imageClick {
     font-size: 15px;
     width: 240px;
   }
-  #midll-window {
+  #input-shop {
     height: 36px;
     width: 240px;
   }
@@ -229,7 +208,7 @@ imageClick {
     flex-direction: column;
     align-items: center;
   }
-  .center {
+  .div-container-element {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -239,7 +218,6 @@ imageClick {
     align-items: flex-end;
   }
 }
-
 @media screen and (max-width: 1042px) {
   h2 {
     font-size: 56px;
@@ -248,50 +226,45 @@ imageClick {
   imageClick {
     margin-left: 6vh;
   }
-  #second {
+  #div-how-much {
     margin-left: 6vh;
   }
-  #data1 {
+  #data {
     margin-left: 6vh;
   }
-  #ret {
+  #edit {
     width: 150px;
   }
 }
-
 @media screen and (max-width: 975px) {
   h2 {
     font-size: 50px;
     font-weight: normal;
   }
 }
-
 @media screen and (max-width: 871px) {
   h2 {
     font-size: 46px;
     font-weight: normal;
   }
 }
-
 @media screen and (max-width: 810px) {
   imageClick {
     margin-left: 4vh;
   }
-  #second {
+  #div-how-much {
     margin-left: 4vh;
   }
-  #data1 {
+  #data {
     margin-left: 4vh;
   }
 }
-
 @media screen and (max-width: 804px) {
   h2 {
     font-size: 36px;
     font-weight: normal;
   }
 }
-
 @media screen and (max-width: 764px) {
   input {
     height: 36px;
@@ -299,7 +272,7 @@ imageClick {
     font-size: 15px;
     width: 240px;
   }
-  #midll-window {
+  #input-shop {
     height: 36px;
     width: 240px;
   }
@@ -309,7 +282,7 @@ imageClick {
     flex-direction: column;
     align-items: center;
   }
-  .center {
+  .div-container-element {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -328,86 +301,78 @@ imageClick {
   imageClick {
     margin-left: 2vh;
   }
-  #second {
+  #div-how-much {
     margin-left: 2vh;
   }
-  #data1 {
+  #data {
     margin-left: 2vh;
   }
-  #ret {
+  #edit {
     width: 140px;
   }
 }
-
 @media screen and (max-width: 763px) {
   imageClick {
     margin-left: 2vh;
   }
-  #second {
+  #div-how-much {
     margin-left: 2vh;
   }
-  #data1 {
+  #data {
     margin-left: 2vh;
   }
-  #ret {
+  #edit {
     width: 140px;
   }
 }
-
 @media screen and (max-width: 632px) {
   h2 {
     font-size: 33px;
     font-weight: normal;
   }
 }
-
 @media screen and (max-width: 622px) {
   imageClick {
     margin-left: 2vh;
   }
-  #second {
+  #div-how-much {
     margin-left: 2vh;
   }
-  #data1 {
+  #data {
     margin-left: 2vh;
   }
 }
-
 @media screen and (max-width: 581px) {
   h2 {
     font-size: 30px;
     font-weight: normal;
   }
 }
-
 @media screen and (max-width: 538px) {
   imageClick {
     margin-left: 2vh;
   }
-  #second {
+  #div-how-much {
     margin-left: 2vh;
   }
-  #data1 {
+  #data {
     margin-left: 2vh;
   }
 }
-
 @media screen and (max-width: 529px) {
   h2 {
     font-size: 28px;
     font-weight: normal;
   }
 }
-
 @media screen and (max-width: 495px) {
   h2 {
     font-size: 24px;
     font-weight: normal;
   }
 }
-
 @media screen and (max-width: 427px) {
-  #verstka {
+  #div-element-purchases {
     flex-direction: column;
   }
   h2 {
@@ -421,14 +386,13 @@ imageClick {
   body {
     background-color: #c5e7ff;
   }
-  #second {
+  #div-how-much {
     margin-bottom: 1vh;
   }
-  #data1 {
+  #data {
     margin-bottom: 1vh;
   }
 }
-
 @media screen and (max-width: 393px) {
   h2 {
     font-size: 20px;
