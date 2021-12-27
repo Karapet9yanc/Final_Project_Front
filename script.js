@@ -61,7 +61,7 @@ const validate = (evt) => {
   onlyNum = String.fromCharCode(onlyNum);
   const regex = /[0-9]|\./;
   if (!regex.test(onlyNum)) {
-    theEvent.returnValue = false;
+    theEvent.editurnValue = false;
     if (theEvent.preventDefault) theEvent.preventDefault();
   }
 };
@@ -72,6 +72,7 @@ const render = () => {
     expenses.removeChild(expenses.firstChild);
   }
   allPurchases.map((item, index) => {
+    let { text, text2, date } = item;
     const container = document.createElement("div");
     container.className = "allPurchases-container";
     container.id = `task-${index}`;
@@ -83,31 +84,32 @@ const render = () => {
     shop.id = `name-shop`;
     const nameShop = document.createElement("p");
     nameShop.innerText = `${index + 1}) Магазин :`;
-    const text = document.createElement("p");
-    text.id = `elem`;
-    text.innerText = item.text;
+    const element = document.createElement("p");
+    element.id = `elem`;
+    element.innerText = text;
+
     spanShop.appendChild(nameShop);
-    shop.appendChild(text);
+    shop.appendChild(element);
     shopName.appendChild(spanShop);
     shopName.appendChild(shop);
     expenses.appendChild(shopName);
     const divDateElement = document.createElement("div");
     divDateElement.id = "data";
-    const date = document.createElement("p");
-    date.className = "date";
-    date.innerText = item.date;
-    divDateElement.appendChild(date);
+    const elementDate = document.createElement("p");
+    elementDate.className = "date";
+    elementDate.innerText = date;
+    divDateElement.appendChild(elementDate);
     const divHowMuch = document.createElement("div");
     divHowMuch.id = "div-how-much";
     const elementHowMuch = document.createElement("p");
-    elementHowMuch.innerText = item.text2;
+    elementHowMuch.innerText = text2;
     const divElementPurchases = document.createElement("div");
     divElementPurchases.id = "div-element-purchases";
     const Rub = document.createElement("span");
     Rub.innerText = " р.";
     elementHowMuch.appendChild(Rub);
     divHowMuch.appendChild(elementHowMuch);
-    sumBuy = sumBuy + Number(item.text2);
+    sumBuy = sumBuy + Number(text2);
     const imageClick = document.createElement("div");
     imageClick.id = "imageClick";
     const imageSave = document.createElement("img");
@@ -115,7 +117,7 @@ const render = () => {
     const imageEdit = document.createElement("img");
     imageEdit.src = "img/edit.png";
     const inpSave = document.createElement("input");
-    inpSave.id = "edit";
+    inpSave.id = "edit-price";
     const inpReplace = document.createElement("input");
     inpReplace.type = "number";
     inpReplace.id = "edit";
@@ -123,26 +125,23 @@ const render = () => {
     inpData.type = "date";
     inpData.id = "edit";
     imageEdit.onclick = () => {
-      shop.replaceChild(inpSave, text);
-      divDateElement.replaceChild(inpData, date);
+      shop.replaceChild(inpSave, element);
+      divDateElement.replaceChild(inpData, elementDate);
       divHowMuch.replaceChild(inpReplace, elementHowMuch);
       imageClick.replaceChild(imageSave, imageEdit);
-      inpSave.value = item.text;
-      inpReplace.value = item.text2;
-      inpData.value = item.date;
+      inpSave.value = text;
+      inpReplace.value = text2;
+      inpData.value = date;
     };
     imageSave.onclick = async () => {
-      if (
-        (item.text = inpSave.value.trim()) &&
-        (item.text2 = inpReplace.value)
-      ) {
-        shop.replaceChild(text, inpSave);
+      if ((text = inpSave.value.trim()) && (text2 = inpReplace.value)) {
+        shop.replaceChild(element, inpSave);
         divHowMuch.replaceChild(elementHowMuch, inpReplace);
-        text.innerText = inpSave.value;
+        element.innerText = inpSave.value;
         elementHowMuch.innerText = inpReplace.value;
-        item.date = inpData.value;
-        item.text = inpSave.value;
-        item.text2 = inpReplace.value;
+        date = inpData.value;
+        text = inpSave.value;
+        text2 = inpReplace.value;
         const resp = await fetch("http://localhost:8000/updatePurchase", {
           method: "PATCH",
           headers: {
